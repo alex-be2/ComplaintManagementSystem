@@ -1,0 +1,20 @@
+﻿.skeleton-container {
+    /*background-color: var(--background-grey);*/
+    border-radius: var(--radius);
+    background: linear-gradient(90deg, #e8e8e8 25%, #dbdbdb 50%, #e8e8e8 75%);
+    background-size: 200% 100%;
+    animation: loading 5s infinite ease-in-out;
+    margin-top: 50px;
+    width: 45vw;
+    flex-grow: 1;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
