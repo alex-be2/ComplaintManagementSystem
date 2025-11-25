@@ -32,3 +32,5 @@ C:\Users\alexb\OneDrive - Sheffield Hallam University\Desktop\ABCComplaintManage
 C:\Users\alexb\OneDrive - Sheffield Hallam University\Desktop\ABCComplaintManagementSystem\ABCComplaintManagementSystem\obj\Debug\net8.0\ref\ABCComplaintManagementSystem.dll
 C:\Users\alexb\OneDrive - Sheffield Hallam University\Desktop\ABCComplaintManagementSystem\ABCComplaintManagementSystem\obj\Debug\net8.0\scopedcss\Components\Layout\CompanyLayout.razor.rz.scp.css
 C:\Users\alexb\OneDrive - Sheffield Hallam University\Desktop\ABCComplaintManagementSystem\ABCComplaintManagementSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Company.Razor.rz.scp.css
+C:\Users\alexb\OneDrive - Sheffield Hallam University\Desktop\ABCComplaintManagementSystem\ABCComplaintManagementSystem\obj\Debug\net8.0\scopedcss\Components\Layout\ManagementLayout.razor.rz.scp.css
+C:\Users\alexb\OneDrive - Sheffield Hallam University\Desktop\ABCComplaintManagementSystem\ABCComplaintManagementSystem\obj\Debug\net8.0\scopedcss\Components\Pages\ComplaintManagement.razor.rz.scp.css

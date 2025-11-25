@@ -1,0 +1,56 @@
+﻿@using ABCComplaintManagementSystem.Components.Layout
+@page "/complaintManagement"
+@inject NavigationManager Navigator
+@rendermode InteractiveServer
+@layout ManagementLayout
+
+<PageTitle>Complaint Management</PageTitle>
+
+<div id="top-panel">
+    <div class="flex-row container-space-between">
+        <div>
+            Company Ref:
+        </div>
+        <div>
+            Role:
+        </div>
+    </div>
+</div>
+
+
+<div class="flex-row">
+    <div>
+        <div class="inbox-title">Inbox:</div>
+        <div class="inbox-container">
+            <table>
+                @for (int x = 0; x < 15; x++)
+                {
+                    @if(x%2 == 0)
+                    {
+                        <div class="table-entry-1">
+                            <tr>
+                                <td>xxxx</td>
+                            </tr> 
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="table-entry-2">
+                            <tr>
+                                <td>xxxx</td>
+                            </tr>
+                        </div>
+                    }
+                }
+            </table>
+        </div>
+    </div>
+    <div class="open-container flex-grow">
+
+    </div>
+</div>
+
+
+@code{
+
+}

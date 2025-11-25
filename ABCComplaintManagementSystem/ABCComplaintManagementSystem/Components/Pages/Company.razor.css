@@ -1,5 +1,10 @@
-﻿.skeleton-container {
-    /*background-color: var(--background-grey);*/
+﻿#button-container {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.skeleton-container {
     border-radius: var(--radius);
     background: linear-gradient(90deg, #e8e8e8 25%, #dbdbdb 50%, #e8e8e8 75%);
     background-size: 200% 100%;

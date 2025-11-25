@@ -192,6 +192,103 @@ main[b-hytw5uo382] {
         right: 0.75rem;
         top: 0.5rem;
     }
+/* _content/ABCComplaintManagementSystem/Components/Layout/ManagementLayout.razor.rz.scp.css */
+.page[b-81x4jnfzyl] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-81x4jnfzyl] {
+    flex: 1;
+}
+
+.sidebar[b-81x4jnfzyl] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-81x4jnfzyl] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-81x4jnfzyl]  a, .top-row[b-81x4jnfzyl]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-81x4jnfzyl]  a:hover, .top-row[b-81x4jnfzyl]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-81x4jnfzyl]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-81x4jnfzyl] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-81x4jnfzyl]  a, .top-row[b-81x4jnfzyl]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-81x4jnfzyl] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-81x4jnfzyl] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-81x4jnfzyl] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-81x4jnfzyl]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-81x4jnfzyl], article[b-81x4jnfzyl] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+#blazor-error-ui[b-81x4jnfzyl] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-81x4jnfzyl] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
 /* _content/ABCComplaintManagementSystem/Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-igt86w7o5j] {
     appearance: none;
@@ -299,8 +396,13 @@ main[b-hytw5uo382] {
     }
 }
 /* _content/ABCComplaintManagementSystem/Components/Pages/Company.razor.rz.scp.css */
+#button-container[b-s25zcoidze] {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
 .skeleton-container[b-s25zcoidze] {
-    /*background-color: var(--background-grey);*/
     border-radius: var(--radius);
     background: linear-gradient(90deg, #e8e8e8 25%, #dbdbdb 50%, #e8e8e8 75%);
     background-size: 200% 100%;
@@ -318,4 +420,71 @@ main[b-hytw5uo382] {
     100% {
         background-position: -200% 0;
     }
+}
+/* _content/ABCComplaintManagementSystem/Components/Pages/ComplaintManagement.razor.rz.scp.css */
+#top-panel[b-pw03eeilpz] {
+    width: 100vw;
+    height: 50px;
+    background: #e8e8e8;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: inherit;
+}
+
+
+.inbox-container[b-pw03eeilpz] {
+    display: flex;
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    height: 75vh;
+    width: 20vw;
+    margin: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.inbox-container:hover[b-pw03eeilpz] {
+    cursor: pointer;
+}
+
+.inbox-title[b-pw03eeilpz] {
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    height: 5vh;
+    width: 20vw;
+    margin: 10px;
+    margin-top: 60px;
+    background-color: #a4adc2;
+    padding: 5px;
+}
+
+.open-container[b-pw03eeilpz] {
+    margin: 10px;
+    border: 2px solid black;
+    height: 80vh;
+    width: 40vw;
+    margin-top: 60px;
+    overflow-y: auto;
+}
+
+.table-entry-1[b-pw03eeilpz] {
+    height: 40px;
+    margin: auto;
+    width: 100%;
+    background-color: #a4adc2;
+    padding: 5px;
+}
+
+.table-entry-2[b-pw03eeilpz] {
+    height: 40px;
+    margin: auto;
+    width: 100%;
+    background-color: #c8cede;
+    padding: 5px;
+}
+
+.table-entry-1:hover[b-pw03eeilpz], .table-entry-2:hover[b-pw03eeilpz]{
+    font-weight: 800;
 }

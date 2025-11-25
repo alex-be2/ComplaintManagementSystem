@@ -1,16 +1,14 @@
 ﻿@using ABCComplaintManagementSystem.Components.Layout
-@page "/company"
+@page "/"
+@inject NavigationManager Navigator
 @rendermode InteractiveServer
 
 @layout CompanyLayout
 
 <PageTitle>Company</PageTitle>
 
-<div class="flex-row">
-    <button class="main-button">Create Complaint</button>
-    <button class="main-button">Create Complaint</button>
-
-
+<div id="button-container">
+        <button @onclick="CreateComplaint" class="main-button">Create Complaint</button>
 </div>
 
 <div class="flex-row">
@@ -25,3 +23,11 @@
 
     </div>
 </div>
+
+@code{
+    private void CreateComplaint()
+    {
+        Navigator.NavigateTo("/ComplaintManagement");
+    }
+
+}

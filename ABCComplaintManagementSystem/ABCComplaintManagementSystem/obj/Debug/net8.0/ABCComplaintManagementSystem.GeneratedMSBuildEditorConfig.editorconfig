@@ -56,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope = b-359i7rcnjc
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-hytw5uo382
 
+[C:/Users/alexb/OneDrive - Sheffield Hallam University/Desktop/ABCComplaintManagementSystem/ABCComplaintManagementSystem/Components/Layout/ManagementLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFuYWdlbWVudExheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-81x4jnfzyl
+
 [C:/Users/alexb/OneDrive - Sheffield Hallam University/Desktop/ABCComplaintManagementSystem/ABCComplaintManagementSystem/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-igt86w7o5j
@@ -63,3 +67,7 @@ build_metadata.AdditionalFiles.CssScope = b-igt86w7o5j
 [C:/Users/alexb/OneDrive - Sheffield Hallam University/Desktop/ABCComplaintManagementSystem/ABCComplaintManagementSystem/Components/Pages/Company.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-s25zcoidze
+
+[C:/Users/alexb/OneDrive - Sheffield Hallam University/Desktop/ABCComplaintManagementSystem/ABCComplaintManagementSystem/Components/Pages/ComplaintManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wbGFpbnRNYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-pw03eeilpz
