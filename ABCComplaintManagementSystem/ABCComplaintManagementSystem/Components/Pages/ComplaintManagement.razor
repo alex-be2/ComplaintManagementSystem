@@ -18,39 +18,56 @@
 </div>
 
 
-<div class="flex-row">
-    <div>
-        <div class="inbox-title">Inbox:</div>
-        <div class="inbox-container">
-            <table>
-                @for (int x = 0; x < 15; x++)
+
+<div class="@BlurClass">
+    <div class="flex-row">
+        <div>
+            <div class="inbox-title">Inbox:</div>
+            <table class="inbox-container">
+                @for (int x = 0; x < 25; x++)
                 {
-                    @if(x%2 == 0)
+                    @if (x % 2 == 0)
                     {
-                        <div class="table-entry-1">
-                            <tr>
-                                <td>xxxx</td>
-                            </tr> 
-                        </div>
+                        var currentIndex = x;
+                        <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-1">
+                            <td>xxxx</td>
+                        </tr>
                     }
                     else
                     {
-                        <div class="table-entry-2">
-                            <tr>
-                                <td>xxxx</td>
-                            </tr>
-                        </div>
+                        var currentIndex = x;
+                        <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-2">
+                            <td>xxxx</td>
+                        </tr>
                     }
                 }
             </table>
         </div>
+        <div class="open-container flex-grow">
+        </div>
     </div>
-    <div class="open-container flex-grow">
 
-    </div>
 </div>
 
+@if (showComplaint == true)
+{
+    <div class="hidden-container">
+        <h1>
+            Complaint Info... @index
+        </h1>
+    </div>
+}
 
-@code{
+@code {
+    bool showBlur = false;
+    string BlurClass => showBlur ? "blur-container" : "";
+    bool showComplaint = false;
+    int index = 0;
 
+    private void DisplayComplaint(int i)
+    {
+        showComplaint = true;
+        index = i;
+        showBlur = !showBlur;
+    }
 }
