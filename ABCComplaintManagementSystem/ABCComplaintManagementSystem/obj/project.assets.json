@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexb\\OneDrive - Sheffield Hallam University\\Desktop\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\alexb\\OneDrive - Sheffield Hallam University\\Desktop\\GitHubTestCMS\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem.csproj",
       "projectName": "ABCComplaintManagementSystem",
-      "projectPath": "C:\\Users\\alexb\\OneDrive - Sheffield Hallam University\\Desktop\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem.csproj",
+      "projectPath": "C:\\Users\\alexb\\OneDrive - Sheffield Hallam University\\Desktop\\GitHubTestCMS\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem.csproj",
       "packagesPath": "C:\\Users\\alexb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexb\\OneDrive - Sheffield Hallam University\\Desktop\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\alexb\\OneDrive - Sheffield Hallam University\\Desktop\\GitHubTestCMS\\ABCComplaintManagementSystem\\ABCComplaintManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
