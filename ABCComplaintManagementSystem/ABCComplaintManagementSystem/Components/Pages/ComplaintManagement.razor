@@ -6,6 +6,10 @@
 
 <PageTitle>Complaint Management</PageTitle>
 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
 <div id="top-panel">
     <div class="flex-row container-space-between">
         <div>
@@ -20,9 +24,10 @@
 
 
 <div class="@BlurClass">
+    @* ----INBOX---- *@
     <div class="flex-row">
-        <div>
-            <div class="inbox-title">Inbox:</div>
+        <div class ="flex-box flex-column">
+            <div class="table-title flex-grow">Inbox:</div>
             <table class="inbox-container">
                 @for (int x = 0; x < 25; x++)
                 {
@@ -37,13 +42,63 @@
                     {
                         var currentIndex = x;
                         <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-2">
-                            <td>x</td>
+                            <td>xxxxx</td>
                         </tr>
                     }
                 }
             </table>
         </div>
-        <div class="open-container flex-grow">
+        @* ----ONGOING---- *@
+        <div class="flex-box flex-column">
+            <div class="table-title flex-grow">
+                Ongoing:
+            </div>
+            <table class="ongoing-container flex-grow">
+                @for (int x = 0; x < 25; x++)
+                {
+                    @if (x % 2 == 0)
+                    {
+                        var currentIndex = x;
+                        <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-1">
+                            <td>xxxx</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        var currentIndex = x;
+                        <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-2">
+                            <td>xxxxx</td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+        @* ----CLOSED---- *@
+        <div class="flex-box flex-column flex-grow">
+            <div class="table-title flex-grow">
+                Closed:
+            </div>
+            <div class="flex-box flex-grow">
+                <table class="closed-container">
+                    @for (int x = 0; x < 25; x++)
+                    {
+                        @if (x % 2 == 0)
+                        {
+                            var currentIndex = x;
+                            <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-1">
+                                <td>xxxx</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            var currentIndex = x;
+                            <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-2">
+                                <td>xxxxx</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
         </div>
     </div>
 
@@ -55,23 +110,23 @@
         <div class="hidden-container-top-panel">
             <div class="flex-row container-space-between">
                 <div>
-                    Title:
+                    Account Reference:
                 </div>
                 <div>
                     Company/xxxx
                 </div>
             </div>
-        </div>
-
+        </div>  
+        <h3>@index</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices ultricies aliquam. Proin enim purus, tristique quis placerat et, tempus in lectus. Morbi blandit nisi sollicitudin finibus vehicula. Cras aliquam risus at nisl fermentum, ac eleifend leo accumsan. Aenean id accumsan turpis. Praesent pellentesque vitae metus eu luctus. Aenean faucibus ligula massa, at fringilla sapien faucibus in.</p>
-
         <div class="hidden-container-bottom-panel">
-            <div class="flex-row container-space-between">
+            <div class="flex-row container-space-between container-align-items" style="right:0;">
 
                 Date Created: xx/xx/xxxx
-
-
-                <button class="main-button">Create Complaint</button>
+                <div>
+                    <button @onclick="(() => DisplayComplaint(-1))" class="main-button">Close  <i class="fa-solid fa-x"></i></button>
+                    <button @onclick="(() => DisplayComplaint(-1))" class="main-button">Assign Support  <i class="fa-solid fa-user"></i></button>
+                </div>
 
             </div>
         </div>
@@ -88,8 +143,17 @@
 
     private void DisplayComplaint(int i)
     {
-        showComplaint = true;
-        index = i;
-        showBlur = !showBlur;
+        if (i == -1)
+        {
+            showComplaint = false;
+            showBlur = !showBlur;
+
+        }
+        else
+        {
+            showComplaint = true;
+            index = i;
+            showBlur = !showBlur;            
+        }
     }
 }

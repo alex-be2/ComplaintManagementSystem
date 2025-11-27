@@ -6,7 +6,8 @@
     --background-grey: #ababab;
     --page-grey: #ededed;
     --light-light-blue: #b9ddfa;
-    --light-pastel-blue: #a4adc2 --radius: 10px;
+    --light-pastel-blue: #a4adc2;
+    --radius: 10px;
 }
 
 body {
@@ -26,6 +27,15 @@ body {
     justify-content: space-between;
 }
 
+.container-align-items {
+    display: flex;
+    align-items: center;
+}
+
+.flex-box {
+    display: flex;
+}
+
 .flex-row {
     display: flex;
     flex-direction:row;
@@ -34,8 +44,7 @@ body {
 .flex-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 70vh;
+   /* height: 70vh;*/
 }
 
 .flex-grow {
@@ -44,10 +53,11 @@ body {
 
 .main-button, .main-button-select {
     background: none;
-    border-radius: var(--radius);
+    border-radius: 5px;
     border: 1px solid #000000;
     padding: 10px;
     align-content: center;
+    box-sizing: border-box;
 }
 
 .main-button-select {
@@ -56,8 +66,9 @@ body {
 }
 
 .main-button:hover {
-    border-inline: 2px solid #000000;
+    outline: 2px solid #000000;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .main-button-select:hover {

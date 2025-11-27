@@ -9,7 +9,7 @@
 }
 
 
-.inbox-container {
+.inbox-container, .ongoing-container, .closed-container {
     display: flex;
     border: 2px solid #ededed;
     border-radius: 5px;
@@ -21,15 +21,22 @@
     flex-direction: column;
 }
 
-    .inbox-container:hover {
-        cursor: pointer;
-    }
+.ongoing-container {
+    width: 50vw;
+}
 
-.inbox-title {
+.closed-container {
+    width: 100%;
+}
+
+.inbox-container:hover, .ongoing-container:hover, .closed-container:hover {
+    cursor: pointer;
+}
+
+.table-title {
     border: 2px solid #ededed;
     border-radius: 5px;
     height: 5vh;
-    width: 20vw;
     margin: 10px;
     margin-top: 60px;
     background-color: #a4adc2;
@@ -37,6 +44,7 @@
 }
 
 .hidden-container, .hidden-container-top-panel {
+    display: flex;
     height: 50vh;
     width: 70vw;
     max-width: 70vw;
@@ -51,6 +59,7 @@
     transform: translate(-50%, -50%);
     padding: 5px;
     padding-top: 50px;
+    flex-direction: column;
 }
 
 .hidden-container-top-panel {
@@ -67,20 +76,12 @@
     transform: translate(-50%, -50%);*/
     bottom: 0;
     position: absolute;
-    width: 95%;
-    max-width: 95%;
+    width: 68vw;
+    /*background-color: black;*/
+    margin: 15px;
 }
 
-.open-container {
-    margin: 10px;
-    border: 2px solid black;
-    height: 80vh;
-    width: 40vw;
-    margin-top: 60px;
-    overflow-y: auto;
-}
-
-.table-entry-1 {
+.table-entry-1, .table-entry-2{
     height: 40px;
     margin: auto;
     width: 100%;
@@ -89,16 +90,12 @@
 }
 
 .table-entry-2 {
-    height: 40px;
-    margin: auto;
-    width: 100%;
     background-color: #c8cede;
-    padding: 5px;
 }
 
-    .table-entry-1:hover, .table-entry-2:hover {
-        font-weight: 800;
-    }
+.table-entry-1:hover, .table-entry-2:hover {
+    font-weight: 800;
+}
 
 .blur-container {
     filter: blur(5px);

@@ -9,7 +9,7 @@
 }
 
 
-.inbox-container[b-pw03eeilpz] {
+.inbox-container[b-pw03eeilpz], .ongoing-container[b-pw03eeilpz], .closed-container[b-pw03eeilpz] {
     display: flex;
     border: 2px solid #ededed;
     border-radius: 5px;
@@ -21,15 +21,22 @@
     flex-direction: column;
 }
 
-    .inbox-container:hover[b-pw03eeilpz] {
-        cursor: pointer;
-    }
+.ongoing-container[b-pw03eeilpz] {
+    width: 50vw;
+}
 
-.inbox-title[b-pw03eeilpz] {
+.closed-container[b-pw03eeilpz] {
+    width: 100%;
+}
+
+.inbox-container:hover[b-pw03eeilpz], .ongoing-container:hover[b-pw03eeilpz], .closed-container:hover[b-pw03eeilpz] {
+    cursor: pointer;
+}
+
+.table-title[b-pw03eeilpz] {
     border: 2px solid #ededed;
     border-radius: 5px;
     height: 5vh;
-    width: 20vw;
     margin: 10px;
     margin-top: 60px;
     background-color: #a4adc2;
@@ -37,6 +44,7 @@
 }
 
 .hidden-container[b-pw03eeilpz], .hidden-container-top-panel[b-pw03eeilpz] {
+    display: flex;
     height: 50vh;
     width: 70vw;
     max-width: 70vw;
@@ -51,6 +59,7 @@
     transform: translate(-50%, -50%);
     padding: 5px;
     padding-top: 50px;
+    flex-direction: column;
 }
 
 .hidden-container-top-panel[b-pw03eeilpz] {
@@ -67,20 +76,12 @@
     transform: translate(-50%, -50%);*/
     bottom: 0;
     position: absolute;
-    width: 95%;
-    max-width: 95%;
+    width: 68vw;
+    /*background-color: black;*/
+    margin: 15px;
 }
 
-.open-container[b-pw03eeilpz] {
-    margin: 10px;
-    border: 2px solid black;
-    height: 80vh;
-    width: 40vw;
-    margin-top: 60px;
-    overflow-y: auto;
-}
-
-.table-entry-1[b-pw03eeilpz] {
+.table-entry-1[b-pw03eeilpz], .table-entry-2[b-pw03eeilpz]{
     height: 40px;
     margin: auto;
     width: 100%;
@@ -89,16 +90,12 @@
 }
 
 .table-entry-2[b-pw03eeilpz] {
-    height: 40px;
-    margin: auto;
-    width: 100%;
     background-color: #c8cede;
-    padding: 5px;
 }
 
-    .table-entry-1:hover[b-pw03eeilpz], .table-entry-2:hover[b-pw03eeilpz] {
-        font-weight: 800;
-    }
+.table-entry-1:hover[b-pw03eeilpz], .table-entry-2:hover[b-pw03eeilpz] {
+    font-weight: 800;
+}
 
 .blur-container[b-pw03eeilpz] {
     filter: blur(5px);
