@@ -1,0 +1,76 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap');
+
+
+
+:root {
+    --background-grey: #ababab;
+    --page-grey: #ededed;
+    --light-light-blue: #b9ddfa;
+    --light-pastel-blue: #a4adc2;
+    --radius: 10px;
+}
+
+body {
+    background-color: var(--page-grey);
+    font-family: "Voces", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-centre {
+    justify-content: center;
+    margin: auto;
+}
+
+.container-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-align-items {
+    display: flex;
+    align-items: center;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction:row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+   /* height: 70vh;*/
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.main-button, .main-button-select {
+    background: none;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 10px;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.main-button-select {
+    background-color: var(--light-light-blue);
+    border: 3px solid #000000;
+}
+
+.main-button:hover {
+    outline: 2px solid #000000;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.main-button-select:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+﻿@using ABCComplaintManagementSystem.Components.Layout
+@page "/"
+@inject NavigationManager Navigator
+@rendermode InteractiveServer
+
+@layout CompanyLayout
+
+<PageTitle>Company</PageTitle>
+
+<div id="button-container">
+        <button @onclick="CreateComplaint" class="main-button">Create Complaint</button>
+</div>
+
+<div class="flex-row">
+    <div class="flex-column flex-grow container-space-between" style="height: 70vh">
+        <div class="skeleton-container"></div>
+        <div class="skeleton-container"></div>
+    </div>
+    <div class="flex-column flex-grow container-space-between" style="height: 70vh">
+        <div class="skeleton-container"></div>
+        <div class="skeleton-container"></div>
+        <div class="skeleton-container"></div>
+
+    </div>
+</div>
+
+@code{
+    private void CreateComplaint()
+    {
+        Navigator.NavigateTo("/ComplaintManagement");
+    }
+
+}

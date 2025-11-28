@@ -1,0 +1,106 @@
+#top-panel[b-pw03eeilpz] {
+    width: 100vw;
+    height: 50px;
+    background: #e8e8e8;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: inherit;
+}
+
+
+.inbox-container[b-pw03eeilpz], .ongoing-container[b-pw03eeilpz], .closed-container[b-pw03eeilpz] {
+    display: flex;
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    height: 75vh;
+    width: 20vw;
+    margin: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.ongoing-container[b-pw03eeilpz] {
+    width: 50vw;
+}
+
+.closed-container[b-pw03eeilpz] {
+    width: 100%;
+}
+
+.inbox-container:hover[b-pw03eeilpz], .ongoing-container:hover[b-pw03eeilpz], .closed-container:hover[b-pw03eeilpz] {
+    cursor: pointer;
+}
+
+.table-title[b-pw03eeilpz] {
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    height: 5vh;
+    margin: 10px;
+    margin-top: 60px;
+    background-color: #a4adc2;
+    padding: 5px;
+}
+
+.hidden-container[b-pw03eeilpz], .hidden-container-top-panel[b-pw03eeilpz] {
+    display: flex;
+    height: 50vh;
+    width: 70vw;
+    max-width: 70vw;
+    border-radius: 5px;
+    position: absolute;
+    margin: auto;
+    /*border: 2px solid #ededed;*/
+    background: #e8e8e8;
+    filter: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    padding-top: 50px;
+    flex-direction: column;
+}
+
+.hidden-container-top-panel[b-pw03eeilpz] {
+    height: 10vh;
+    border: none;
+    background: #a4adc2;
+    top: 0;
+    padding: 25px;
+}
+
+.hidden-container-bottom-panel[b-pw03eeilpz] {
+    /*    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    bottom: 0;
+    position: absolute;
+    width: 68vw;
+    /*background-color: black;*/
+    margin: 15px;
+}
+
+.table-entry-1[b-pw03eeilpz], .table-entry-2[b-pw03eeilpz] {
+    height: 40px;
+    /*margin: auto;*/
+    width: 100%;
+    background-color: #a4adc2;
+    padding: 5px;
+/*    white-space: nowrap;
+    overflow: hidden;*/
+    
+}
+
+.table-entry-2[b-pw03eeilpz] {
+    background-color: #c8cede;
+}
+
+.table-entry-1:hover[b-pw03eeilpz], .table-entry-2:hover[b-pw03eeilpz] {
+    font-weight: 800;
+}
+
+.blur-container[b-pw03eeilpz] {
+    filter: blur(5px);
+    pointer-events: none;
+}

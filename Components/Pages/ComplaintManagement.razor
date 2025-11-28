@@ -1,0 +1,213 @@
+﻿@using ABCComplaintManagementSystem.Components.Layout
+@page "/complaintManagement"
+@inject NavigationManager Navigator
+@using ABCComplaintManagementSystem.Components.Data
+@inject ApplicationDbContext DbContext
+@rendermode InteractiveServer
+@layout ManagementLayout
+
+<PageTitle>Complaint Management</PageTitle>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<div id="top-panel">
+    <div class="flex-row container-space-between">
+        <div>
+            Company Ref:
+        </div>
+        <div>
+            Role:
+        </div>
+    </div>
+</div>
+
+
+
+<div class="@BlurClass">
+    @* ----INBOX---- *@
+    <div class="flex-row">
+        <div class ="flex-box flex-column">
+            <div class="table-title flex-grow">Inbox:</div>
+            <table class="inbox-container">
+                @foreach (var complaint in complaints.Where(complaint => complaint.Status == 0))
+                {
+                    @if (tableCount % 2 == 0)
+                    {
+                        var tableIndex = complaint.ComplaintID;
+                        <tr @onclick="(() => DisplayComplaint(tableIndex))" class="table-entry-1">
+                            <td>@complaint.ComplaintTitle</td>
+                        </tr>
+                        tableCount++;
+                    }
+                    else
+                    {
+                        var tableIndex = complaint.ComplaintID;
+                        <tr @onclick="(() => DisplayComplaint(tableIndex))" class="table-entry-2">
+                            <td>@complaint.ComplaintTitle</td>
+                        </tr>
+                        tableCount++;
+                    }
+                }
+            </table>
+        </div>
+        @* ----ONGOING---- *@
+        <div class="flex-box flex-column">
+            <div class="table-title flex-grow">
+                Ongoing:
+            </div>
+            <table class="ongoing-container flex-grow">
+                @for (int x = 0; x < 25; x++)
+                {
+                    @if (x % 2 == 0)
+                    {
+                        var currentIndex = x;
+                        <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-1">
+                            <td>xxxx</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        var currentIndex = x;
+                        <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-2">
+                            <td>xxxxx</td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+        @* ----CLOSED---- *@
+        <div class="flex-box flex-column flex-grow">
+            <div class="table-title flex-grow">
+                Closed:
+            </div>
+            <div class="flex-box flex-grow">
+                <table class="closed-container">
+                    @for (int x = 0; x < 25; x++)
+                    {
+                        @if (x % 2 == 0)
+                        {
+                            var currentIndex = x;
+                            <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-1">
+                                <td>xxxx</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            var currentIndex = x;
+                            <tr @onclick="(() => DisplayComplaint(currentIndex))" class="table-entry-2">
+                                <td>xxxxx</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@if (showComplaint == true)
+{
+    <div class="hidden-container">
+        <div class="hidden-container-top-panel">
+            <div class="flex-row container-space-between">
+                <div>
+                    Account Reference:
+                </div>
+                <div>
+                    Company/xxxx
+                </div>
+            </div>
+        </div>  
+        <h3>@GetComplaint(currentComplaintID).ComplaintTitle</h3>
+        <p>@GetComplaint(currentComplaintID).ComplaintDescription</p>
+        <div class="hidden-container-bottom-panel">
+            <div class="flex-row container-space-between container-align-items" style="right:0;">
+                <h6>Submitted: @GetComplaint(currentComplaintID).DateCreated</h6>
+                <div>
+                    <button @onclick="(() => DisplayComplaint(-1))" class="main-button">Close  <i class="fa-solid fa-x"></i></button>
+                    <button @onclick="GetCompanies" class="main-button">Assign Support  <i class="fa-solid fa-user"></i></button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+}
+
+@code {
+    int currentComplaintID = 0;
+    int tableCount = 0;
+    bool showBlur = false;
+    string BlurClass => showBlur ? "blur-container" : "";
+    bool showComplaint = false;
+    int index = 0;
+
+    int a = 0;
+
+    private List<Companies> companies = new List<Companies>();
+
+    private List<Complaints> complaints = new List<Complaints>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        complaints = DbContext.Complaints.ToList();
+
+    }
+
+    // private async Task<List<Complaints>> GetComplaints()
+    // {
+    //     complaints = DbContext.Complaints.ToList();
+
+    //     return complaints;
+    // }
+
+    private Complaints GetComplaint(int i)
+    {
+        // complaints = await GetComplaints();
+
+        var com = new Complaints();
+
+        foreach (var complaint in complaints)
+        {
+            if(complaint.ComplaintID == i)
+            {
+                com = complaint;
+            }
+        }
+
+        return com;
+    }
+
+    private void GetCompanies()
+    {
+        companies = DbContext.Companies.ToList();
+
+        foreach (var company in companies)
+        {
+            Console.WriteLine(company.CompanyName);
+        }
+    }
+
+    private void DisplayComplaint(int i)
+    {
+        if (i == -1)
+        {
+            showComplaint = false;
+            showBlur = !showBlur;
+
+        }
+        else
+        {
+            showComplaint = true;
+            index = i;
+            showBlur = !showBlur;
+            currentComplaintID = i;
+        }
+    }
+
+
+}
